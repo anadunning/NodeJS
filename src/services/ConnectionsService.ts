@@ -25,11 +25,11 @@ class ConnectionsService {
     });
 
     await this.connectionsRepository.save(connection);
-    return connection;
+    return connection;  // Ver essa linha de novo no git
   }
 
   async findByUserId(user_id: string) {
-    const connection = await this.connectionsRepository.findOne({ 
+    const connection = this.connectionsRepository.findOne({  // removed await before this.
       user_id,
     });
     return connection;

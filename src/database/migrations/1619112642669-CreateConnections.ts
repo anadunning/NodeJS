@@ -47,8 +47,8 @@ export class CreateConnections1619112642669 implements MigrationInterface {
                 referencedColumnNames: ["id"],
                 columnNames: ["user_id"],
                 onDelete: "SET NULL",
-                onUpdate: "SET NULL",
-            })
+                onUpdate: "CASCADE",  // changed from "SET NULL" to "CASCADE"
+            }),
         );
     }
 

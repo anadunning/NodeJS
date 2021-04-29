@@ -20,10 +20,10 @@ export class CreateUsers1619025812245 implements MigrationInterface {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()"
-                    }
+                    },
                 ],
-            })
-        )
+            }),
+        );
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
